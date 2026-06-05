@@ -1,0 +1,166 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+                    body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        background: radial-gradient(circle at 20% 25%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 55%),
+                                    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 60%),
+                                    radial-gradient(circle at 50% 70%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%),
+                                    linear-gradient(135deg, #4f8edc 0%, #1b3a6a 100%);
+                        min-height: 100vh;
+                        padding: 20px;
+                        background-attachment: fixed;
+                    }
+            
+            
+        
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        #taskInput {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        #taskInput:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background: #5568d3;
+        }
+        
+        .lists-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .list-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .list-section.completed {
+            border-left-color: #48bb78;
+        }
+        
+        .list-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .task-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .task-item.completed-task {
+            opacity: 0.7;
+        }
+        
+        .task-content {
+            flex: 1;
+        }
+        
+        .task-text {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .task-item.completed-task .task-text {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .task-time {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .task-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .task-actions button {
+            padding: 6px 12px;
+            font-size: 13px;
+            background: #667eea;
+        }
+        
+        .task-actions button.delete {
+            background: #f56565;
+        }
+        
+        .task-actions button.complete {
+            background: #48bb78;
+        }
+        
+        .task-actions button.undo {
+            background: #ed8936;
+        }
+        
+        .task-actions button.edit {
+            background: #4299e1;
+        }
+        
+        .empty-message {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .lists-container {
+                grid-template-columns: 1fr;
+            }
+        }
